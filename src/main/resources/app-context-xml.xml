@@ -6,7 +6,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="dependency" class="com.apress.prospring5.ch3.Dependency"/>
+    <bean id="dependency" class="com.apress.prospring5.ch3.Dependency">
+        <constructor-arg index="0" value="myDependency"/>
+    </bean>
     <bean id="consInj" class="com.apress.prospring5.ch3.ConstructorInjection"
           c:dependency-ref="dependency">
     </bean>
